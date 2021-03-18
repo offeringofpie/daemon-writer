@@ -1,0 +1,110 @@
+/* ./src/index.css */
+:root {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #283141;
+  --color-border: #172030;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  margin: 0.2em 0;
+  display: block;
+}
+
+input[type='range']:focus {
+  outline: 0;
+}
+
+/* SLIDER THUMB -> represented by the orange ball in the design */
+/* Webkit based browsers (chrome, opera, ...) */
+input[type='range']::-webkit-slider-thumb {
+  /* Removes the default styling */
+  -webkit-appearance: none;
+
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+
+  /* The inset shadow gives depth and makes the thumb look 3 dimensional and the other one shows a subtle effect of the shadow it creates because of the light source coming from the top left of the page */
+  box-shadow: inset 0.8em 0.8em 5px -8px rgba(255, 255, 255, 0.4),
+    inset -0.4em -0.4em 10px -3px rgba(0, 0, 0, 0.2),
+    0.7em 0.5em 7px -0.5em rgba(0, 0, 0, 0.4);
+
+  cursor: pointer;
+}
+
+/*All the same stuff for firefox */
+input[type='range']::-moz-range-thumb {
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  transition: 0.2s all ease-in-out;
+  box-shadow: inset 0.8em 0.8em 5px -8px rgba(255, 255, 255, 0.4),
+    inset -0.4em -0.4em 10px -3px rgba(0, 0, 0, 0.2),
+    0.7em 0.5em 7px -0.5em rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: 0;
+}
+
+label:hover input[type='range']::-webkit-slider-thumb,
+input[type='range']:focus::-webkit-slider-thumb {
+  background: rgba(255, 255, 255, 0.6);
+}
+label:hover input[type='range']::-moz-range-thumb,
+input[type='range']:focus::-moz-range-thumb {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* RUNNABLE TRACK -> represented by the indented carve in which the ball (thumb) moves */
+/* Webkit browsers */
+input[type='range']::-webkit-slider-runnable-track {
+  background: transparent;
+  width: 100%;
+  height: 2em;
+  border-radius: 1em;
+  margin: 1em 0;
+  /* These shadow are what create the skeumorphic indent on the track. The first one is dark to show places in the indent that light don't reach and the second one shows places where light meets thereby creating the illusion of depth */
+  box-shadow: inset 0.6em 1em 10px rgba(0, 0, 0, 0.1),
+    inset -0.6em -1em 10px rgba(255, 255, 255, 0.2);
+}
+/* For firefox */
+input[type='range']::-moz-range-track {
+  background: transparent;
+  width: 100%;
+  height: 2em;
+  margin: 1em 0;
+  border-radius: 1em;
+  box-shadow: inset 0.6em 1em 10px rgba(0, 0, 0, 0.1),
+    inset -0.6em -1em 10px rgba(255, 255, 255, 0.2);
+}
