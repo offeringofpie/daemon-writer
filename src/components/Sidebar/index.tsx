@@ -26,11 +26,12 @@ export default class Sidebar extends react.Component<any, any> {
 
   render() {
     return (
-      <aside className="p-6 border bg-opacity-30 bg-gray-100 border-gray-100 border-opacity-50 shadow-xl m-6 backdrop-filter-blur rounded-xl text-blue-600 border-r-0 border-b-0">
+      <aside className="p-6 border bg-opacity-30 bg-gray-100 border-gray-100 border-opacity-50 shadow-xl m-6 backdrop-filter-blur rounded-xl text-blue-600 border-r-0 border-b-0 flex-third">
         <form
           method="POST"
           action="http://localhost:8888"
           onSubmit={(ev) => {
+            console.log(this.state);
             this.state.onSubmit(ev, this.state);
           }}
         >
@@ -134,10 +135,11 @@ export default class Sidebar extends react.Component<any, any> {
               />
             </label>
           </div>
-          <div className="flex justify-center mt-3">
+          <div className="flex justify-center mt-6">
             <button
+              type="button"
               onClick={this.state.clearText}
-              className="font-bold py-2 px-4 rounded-xl inline-flex items-center text-gray-100 bg-red-500 hover:bg-red-600 focus:outline-nonetransition-all duration-200 ease-in-out border-0 shadow-inner-glass hover:shadow-sphere-active mr-2"
+              className="font-bold py-2 px-4 mr-2 rounded-xl inline-flex items-center text-gray-100 bg-red-500 hover:bg-red-600 focus:outline-nonetransition-all duration-200 ease-in-out border-0 shadow-button hover:shadow-button-hover"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +158,7 @@ export default class Sidebar extends react.Component<any, any> {
               <span>Delete</span>
             </button>
             <button
-              className="font-bold py-2 px-4 rounded-xl inline-flex items-center text-gray-100 bg-green-500 hover:bg-green-600 focus:outline-nonetransition-all duration-200 ease-in-out border-0 shadow-inner-glass hover:shadow-sphere-active"
+              className="font-bold py-2 px-4 rounded-xl inline-flex items-center text-gray-100 bg-green-500 hover:bg-green-600 focus:outline-nonetransition-all duration-200 ease-in-out border-0 shadow-button hover:shadow-button-hover"
               type="submit"
             >
               <svg

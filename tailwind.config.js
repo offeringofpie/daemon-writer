@@ -24,6 +24,12 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    flex: {
+      half: '1 1 50%',
+      third: '1 1 calc(33% - 3rem)',
+      'two-thirds': '1 1 calc(66% - 3rem)',
+      full: '1 1 100%',
+    },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
       DEFAULT:
@@ -38,8 +44,10 @@ module.exports = {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
-      'inner-glass':
-        'inset 0.8em 0.8em 15px -8px rgba(255, 255, 255, 0.4),inset -0.4em -0.4em 10px -3px rgba(0, 0, 0, 0.2),0.7em 0.5em 7px -0.5em rgba(0, 0, 0, 0.3)',
+      button:
+        '-5px -5px 15px rgba(255, 255, 255, 0.5),5px 5px 15px rgba(70, 70, 70, 0.2),inset -5px -5px 15px rgba(255, 255, 255, 0.1),inset 5px 5px 15px rgba(70, 70, 70, 0.3)',
+      'button-hover':
+        '-5px -5px 15px rgba(255, 255, 255, 0.7),5px 5px 15px rgba(70, 70, 70, 0.5),inset -5px -5px 15px rgba(255, 255, 255, 0.1),inset 5px 5px 15px rgba(70, 70, 70, 0.3)',
       outer:
         '11px 11px 30px rgba(100, 100, 100, 0.3),-11px -11px 30px rgba(255, 255, 255, 0.8)',
       'outer-active':
