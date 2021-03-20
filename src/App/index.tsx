@@ -22,8 +22,7 @@ export default class App extends React.Component<any, any> {
     this.onSubmit = this.onSubmit.bind(this);
   }
   componentWillMount() {
-    document.body.className =
-      'bg-gradient-to-br from-blue-300 to-blue-600 antialiased';
+    document.body.className = 'antialiased';
   }
 
   render() {
@@ -48,6 +47,7 @@ export default class App extends React.Component<any, any> {
             rel="noreferrer nofollow"
             target="_blank"
             title="GitHub Repository"
+            className="hover:text-blue-600 transition-all duration-200 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

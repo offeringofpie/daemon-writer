@@ -76,6 +76,7 @@ module.exports = {
     backdropFilter: {
       none: 'none',
       blur: 'blur(5px)',
+      'blur-sm': 'blur(2px)',
     },
   },
   variants: {

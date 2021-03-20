@@ -26,7 +26,7 @@ export default class Sidebar extends react.Component<any, any> {
 
   render() {
     return (
-      <aside className="p-6 border bg-opacity-30 bg-gray-100 border-gray-100 border-opacity-50 shadow-xl m-6 backdrop-filter-blur rounded-xl text-blue-600 border-r-0 border-b-0 flex-third">
+      <aside className="p-6 border bg-opacity-70 bg-gray-300 border-gray-100 border-opacity-50 shadow-xl m-6 backdrop-filter-blur rounded-xl text-blue-600 border-r-0 border-b-0 flex-third backdrop-blur">
         <form
           method="POST"
           action="http://localhost:8888"
