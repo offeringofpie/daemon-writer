@@ -31,7 +31,6 @@ export default class Sidebar extends react.Component<any, any> {
           method="POST"
           action="http://localhost:8888"
           onSubmit={(ev) => {
-            console.log(this.state);
             this.state.onSubmit(ev, this.state);
           }}
         >

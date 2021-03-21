@@ -66,7 +66,6 @@ export default class App extends React.Component<any, any> {
 
   onSubmit(ev: any, state: any) {
     ev.preventDefault();
-    console.log(state);
 
     fetch(`${state.host}`, {
       method: 'POST',
